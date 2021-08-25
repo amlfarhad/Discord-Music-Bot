@@ -2,10 +2,6 @@ import discord
 from discord import commands
 import youtube_dl
 
-if __name__ == '__main__':
-    import config
-    client.run(config.token)
-
 class music(commands.Cog):
     def __init__(self, client):
         self.client = client
