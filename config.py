@@ -1,5 +1,11 @@
 import discord
 from discord import commands
+import clairo
+
+cogs = [clairo]
+
+for i in range(len(cogs)):
+    cogs[i].setup()
 
 client = commands.Bot(command_prefix='#', intents = discord.Intents.all())
 
