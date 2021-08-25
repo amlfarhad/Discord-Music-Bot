@@ -2,6 +2,10 @@ import discord
 from discord import commands
 import youtube_dl
 
+if __name__ == '__main__':
+    import config
+    client.run(config.token)
+
 class music(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -40,6 +44,15 @@ class music(commands.Cog):
             source = await discord.FFmpegOpusAudio.from_probe(url2, **FFMPEG_OPTIONS)
             vc.play(source)
 
+    @commands.command()
+    async def pause(self, ctx):
+        await ctx.voice_client.pause()
+        await ctx.send("Paused")
+
+    @commands.command()
+    async def resume(self, ctx):
+        await ctx.voice_client.resume()
+        await ctx.send("Resumed")
 
 def setup(client):
     client.add_cog(music(client))
