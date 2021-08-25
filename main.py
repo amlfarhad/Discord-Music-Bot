@@ -13,4 +13,4 @@ for i in range(len(cogs)):
 
 if __name__ == '__main__':
     import config
-    client.run(config.token)
+    client.run(os.getenv("YOUR TOKEN"))
