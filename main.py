@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
 import clairo
-from dotenv import load_dotenv
-load_dotenv()
+
+
 
 cogs = [clairo]
 
@@ -13,4 +13,4 @@ for i in range(len(cogs)):
 
 if __name__ == '__main__':
     import config
-    client.run(os.getenv("YOUR TOKEN"))
+    client.run(config.token)
