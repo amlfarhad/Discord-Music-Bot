@@ -1,5 +1,5 @@
 import discord
-from discord import commands
+from discord.ext import commands
 import clairo
 from dotenv import load_dotenv
 load_dotenv()
